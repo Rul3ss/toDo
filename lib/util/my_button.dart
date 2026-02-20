@@ -10,7 +10,17 @@ class MyButton extends StatelessWidget {
     return MaterialButton(
       onPressed: onPressed,
       color: Theme.of(context).primaryColor,
-      child: Text(text),
+      textColor: Colors.white, // Cor do texto
+      padding: EdgeInsets.all(10), // Espaçamento interno
+      shape: RoundedRectangleBorder(
+        // Bordas arredondadas
+        borderRadius: BorderRadius.circular(12),
+      ),
+      elevation: 5, // Sombra
+      child: Text(
+        text,
+        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      ),
     );
   }
 }
